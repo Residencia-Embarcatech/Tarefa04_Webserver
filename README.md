@@ -1,6 +1,4 @@
-# Sistema de Monitoramento de Enchentes em Rios
-
-Sistema desenvolvimento como Projeto Final do curso de capacitação Embarcatech. 
+# Sistema de Monitoramento de Enchentes em Rios com Webserver
 
 ## Descrição do Projeto
 
@@ -11,6 +9,7 @@ Este projeto implementa um sistema embarcado para monitoramento do nível de rio
 - Monitoramento do nível do rio utilizando um sensor ultrassônico HC-SR04 (simulado pelo eixo Y do joystick).
 - Detecção da intensidade da chuva utilizando um sensor de chuva YL-83 (simulado pelo eixo X do joystick).
 - Exibição de alertas em um display SSD1306 via comunicação I2C.
+- Envio de relatórios via requisições web.
 - Geração de relatórios periódicos via UART.
 - Geração de relatórios sob demanda ao pressionar o botão A.
 - Classificação do risco em diferentes níveis: SEGURO, ATENÇÃO, ALERTA e PERIGO.
@@ -24,6 +23,7 @@ Este projeto implementa um sistema embarcado para monitoramento do nível de rio
 - **Botão A:** Para solicitação de relatórios
 - **Display SSD1306:** Para exibição de alertas
 - **UART:** Para comunicação serial e envio de relatórios
+- **Protocolo WIFI:** Para realização de requisições (envio de relatórios, notificações, etc) via web.
 
 ## Configuração dos Pinos
 
@@ -61,15 +61,4 @@ Este projeto implementa um sistema embarcado para monitoramento do nível de rio
 3. **Upload para a placa**:
    - Conecte o Raspberry Pi Pico ao computador.
    - Copie o arquivo `.uf2` gerado para a placa.
-
-## Simulação no Wokwi
-Para visualizar a simulação do projeto no Wokwi:
-1. Instale e configure o simulador Wokwi seguindo as instruções encontradas no link a seguir:  
-   [Introdução ao Wokwi para VS Code](https://docs.wokwi.com/pt-BR/vscode/getting-started).
-2. Abra o arquivo `diagram.json` no VS Code.
-3. Clique em "Start Simulation".
-
-## Vídeo de Demonstração
-O vídeo demonstrativo do projeto está disponível no YouTube e pode ser acessado através do link abaixo:  
-[Link para o vídeo](https://youtu.be/TJ7RmlqV_RI?si=Kxw_2LpnzQWSc2Uc)
 
